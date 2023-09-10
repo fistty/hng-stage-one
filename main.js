@@ -46,8 +46,8 @@ const onInterval = () => {
 
 	if (currentTime) {
 		setInterval(() => {
-			clearInterval(timeInterval); //Add 1000 milliseconds (1 second) to prevent calling the api more than once
-			currentTime += 1000;
+			clearInterval(timeInterval);
+			currentTime += 1000; //Add 1000 milliseconds (1 second) to prevent calling the api more than once
 			dayElement.innerText = `DAY OF THE WEEK: ${daysOfWeek[currentDay]}`;
 			timeElement.innerText = `UTC TIME IN MILLISECONDS: ${currentTime}`;
 		}, 1000);
