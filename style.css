@@ -3,9 +3,7 @@
 
 
 body {
-  font-family: 'Noto Sans Display', sans-serif;
   font-family: 'Noto Sans Mono', monospace;
-
   background-color: #23272f;
   color: #f6f7f9;
   text-align: center;
@@ -28,8 +26,10 @@ img {
 }
 
 a {
+  display: block;
   text-decoration: underline;
-  color: rgb(22, 139, 177)
+  color: rgb(22, 139, 177);
+  margin-bottom: 2rem;
 }
 
 a:visited {
