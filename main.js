@@ -48,8 +48,6 @@ const onInterval = () => {
 	}, 1000);
 };
 
-const getDay = () => {};
-
 const onLoad = () => {
 	setDefaultDayAndTime();
 	getDefaultDayAndTime();
