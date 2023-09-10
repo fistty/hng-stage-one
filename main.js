@@ -17,8 +17,8 @@ const daysOfWeek = [
 const setDefaultDayAndTime = () => {
 	let day = daysOfWeek[new Date().getUTCDay()];
 	timeInterval = setInterval(() => {
-		dayElement.innerText = `DAY OF THE WEEK: ${day}`;
-		timeElement.innerText = `UTC TIME IN MILLISECONDS: ${new Date().getTime()}`;
+		dayElement.innerText = `${day}`;
+		timeElement.innerText = `${new Date().getTime()}`;
 	}, 1000);
 };
 
@@ -41,15 +41,14 @@ const getDefaultDayAndTime = async () => {
 const onInterval = () => {
 	if (currentDay >= 0) {
 		// 0 because day is 0 - 6
-		dayElement.innerText = `DAY OF THE WEEK: ${daysOfWeek[currentDay]}`;
+		dayElement.innerText = `${daysOfWeek[currentDay]}`;
 	}
 
 	if (currentTime) {
 		setInterval(() => {
 			clearInterval(timeInterval);
 			currentTime += 1000; //Add 1000 milliseconds (1 second) to prevent calling the api more than once
-			dayElement.innerText = `DAY OF THE WEEK: ${daysOfWeek[currentDay]}`;
-			timeElement.innerText = `UTC TIME IN MILLISECONDS: ${currentTime}`;
+			timeElement.innerText = `${currentTime}`;
 		}, 1000);
 	}
 };
