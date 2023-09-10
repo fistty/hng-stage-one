@@ -23,7 +23,8 @@ h1 {
 }
 
 img {
-  display: block
+  display: block;
+  max-width: 100%;
 }
 
 a {
